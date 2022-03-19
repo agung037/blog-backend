@@ -1,0 +1,12 @@
+GET http://localhost:3003/api/blog
+
+
+### 
+POST http://localhost:3003/api/blog
+Content-Type: application/json
+
+
+{
+    "title": "The Legend",
+    "author": "nino"
+}

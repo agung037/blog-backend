@@ -8,11 +8,11 @@ const logger = require('./utils/logger')
 const monggose = require('mongoose')
 
 
-logger.info('connecting to ...', config.MONGODB_URI)
+logger.info('connecting to MongoDB')
 
 monggose.connect(config.MONGODB_URI)
     .then(() => {
-        logger.info('connecting')
+        logger.info('Connected...!')
     })
     .catch((error) => {
         logger.error('error connection to MongoDB', error.message)
