@@ -1,10 +1,19 @@
-GET http://localhost:3003/api/blog
+GET http://localhost:3001/api/blog
 
 
 ### 
-POST http://localhost:3003/api/blog
+POST http://localhost:3001/api/blog
 Content-Type: application/json
 
+{
+    "title": "The Legend",
+    "author": "nino"
+}
+
+
+### non existing endpoint
+POST http://localhost:3001/api/fakeurl
+Content-Type: application/json
 
 {
     "title": "The Legend",
