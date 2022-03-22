@@ -1,14 +1,20 @@
-GET http://localhost:3001/api/blog
+GET http://localhost:3001/api/blogs
 
 
 ### 
-POST http://localhost:3001/api/blog
+POST http://localhost:3001/api/blogs
 Content-Type: application/json
 
 {
     "title": "The Legend",
-    "author": "nino"
+    "author": "nino",
+    "url": "googleg.com",
+    "likes": 9
 }
+
+
+### deleting
+DELETE http://localhost:3001/api/blogs/623955da99d240517a975fea
 
 
 ### non existing endpoint
@@ -16,6 +22,21 @@ POST http://localhost:3001/api/fakeurl
 Content-Type: application/json
 
 {
-    "title": "The Legend",
-    "author": "nino"
+    "title": "The Cars",
+    "author": "nino",
+    "url": "goo3gleg.com",
+    "likes": 19,
+}
+
+
+### edit
+PUT http://localhost:3001/api/blogs/62395965241672d1d6292e70
+Content-Type: application/json
+
+{
+    "title": "Art Of Shit",
+    "author": "huges",
+    "url": "ikea.com",
+    "likes": 9
+
 }
