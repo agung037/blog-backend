@@ -1,32 +1,6 @@
+### mendapatkan data semua blogs
 GET http://localhost:3001/api/blogs
 
-
-### 
-POST http://localhost:3001/api/blogs
-Content-Type: application/json
-
-{
-    "title": "The Legend",
-    "author": "nino",
-    "url": "googleg.com",
-    "likes": 9
-}
-
-
-### deleting
-DELETE http://localhost:3001/api/blogs/623955da99d240517a975fea
-
-
-### non existing endpoint
-POST http://localhost:3001/api/fakeurl
-Content-Type: application/json
-
-{
-    "title": "The Cars",
-    "author": "nino",
-    "url": "goo3gleg.com",
-    "likes": 19,
-}
 
 
 ### edit
@@ -40,3 +14,54 @@ Content-Type: application/json
     "likes": 9
 
 }
+
+################ USER #############################
+
+### Mendapatkan data semua user
+GET http://localhost:3001/api/users
+
+
+### Menambahkan USER
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "perez",
+    "name": "Sergio Perez",
+    "password": "toratora"
+}
+
+
+
+
+################# LOGIN ##############################
+
+### Try to login
+POST http://localhost:3001/api/login
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhbmRvIiwiaWQiOiI2MjNkOTYzMGQ3ODNiZmQ4MGE3NGQxMTciLCJpYXQiOjE2NDgyMDM1OTd9.FDoCg2vm9UXYd0B1_Cv31dPxP0MVMX8XJT981T8vaNg
+
+{
+    "username": "lando",
+    "password": "toratora"
+}
+
+
+### tambahkan blog baru dari data auth user login
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhbmRvIiwiaWQiOiI2MjNkOTYzMGQ3ODNiZmQ4MGE3NGQxMTciLCJpYXQiOjE2NDgyMDM1OTd9.FDoCg2vm9UXYd0B1_Cv31dPxP0MVMX8XJT981T8vaNg
+
+{
+    "title": "I Will sacrifice my live for hungary",
+    "author": "Young Guy",
+    "url": "https://fi.linkedin.com/in/mattiluukkainen",
+    "likes": 117
+}
+
+
+
+### DELETING WITH TOKEN
+DELETE http://localhost:3001/api/blogs/623dc1424a6e0319ffa8556d
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhbmRvIiwiaWQiOiI2MjNkOTYzMGQ3ODNiZmQ4MGE3NGQxMTciLCJpYXQiOjE2NDgyMDM1OTd9.FDoCg2vm9UXYd0B1_Cv31dPxP0MVMX8XJT981T8vaNg
