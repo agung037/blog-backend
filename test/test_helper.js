@@ -8,13 +8,35 @@ const initialBlog = [
     'likes': 9,
   },
   {
-    'title': 'The Cars',
+    'title': 'Bald and Bold',
     'author': 'nino',
     'url': 'goo3gleg.com',
     'likes': 19,
   }
-    
-    
+]
+
+const initialUser = [
+  {
+    'username': 'perez',
+    'name': 'Sergio Perez',
+    'password': 'toratora'
+  },
+  {
+    'username': 'alonso',
+    'name': 'Fernando Alonso',
+    'password': 'toratora'
+  },
+  {
+    'username': 'max',
+    'name': 'Max Verstappen',
+    'password': 'toratora'
+  },
+  {
+    'username': 'tsunoda',
+    'name': 'Yuki Tsunoda',
+    'password': 'toratora'
+  },
+
 ]
 
 
@@ -33,5 +55,5 @@ const blogInDb = async () => {
 
 
 module.exports = {
-  initialBlog, nonExistingId, blogInDb
+  initialBlog, nonExistingId, blogInDb, initialUser
 }
