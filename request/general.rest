@@ -22,13 +22,13 @@ GET http://localhost:3001/api/users
 
 
 ### Menambahkan USER
-POST http://localhost:3001/api/users
+POST http://localhost:3003/api/users
 Content-Type: application/json
 
 {
-    "username": "perez",
-    "name": "Sergio Perez",
-    "password": "toratora"
+    "username": "kimi",
+    "name": "Kimi Räikkönen",
+    "password": "salainen"
 }
 
 
@@ -37,31 +37,30 @@ Content-Type: application/json
 ################# LOGIN ##############################
 
 ### Try to login
-POST http://localhost:3001/api/login
+POST http://localhost:3003/api/login
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhbmRvIiwiaWQiOiI2MjNkOTYzMGQ3ODNiZmQ4MGE3NGQxMTciLCJpYXQiOjE2NDgyMDM1OTd9.FDoCg2vm9UXYd0B1_Cv31dPxP0MVMX8XJT981T8vaNg
 
 {
-    "username": "lando",
-    "password": "toratora"
+    "username": "kimi",
+    "password": "salainen"
 }
 
 
 ### tambahkan blog baru dari data auth user login
-POST http://localhost:3001/api/blogs
+POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhbmRvIiwiaWQiOiI2MjNkOTYzMGQ3ODNiZmQ4MGE3NGQxMTciLCJpYXQiOjE2NDgyMDM1OTd9.FDoCg2vm9UXYd0B1_Cv31dPxP0MVMX8XJT981T8vaNg
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtpbWkiLCJpZCI6IjYyNDU3M2ZjZDE4NGQyOGFkNGRkM2IxZiIsImlhdCI6MTY0OTM1MDc5Nn0.50QZJpSOzxRLK3AlDzqssv7eDG7zSqUMbJwNO-9Xyys
 
 {
-    "title": "I Will sacrifice my live for hungary",
-    "author": "Young Guy",
-    "url": "https://fi.linkedin.com/in/mattiluukkainen",
-    "likes": 117
+    "title": "made from vscode 6",
+    "author": "kimi",
+    "url": "https://fi.linkedin.com/in/mattiluukkainen"
+
 }
 
 
 
 ### DELETING WITH TOKEN
-DELETE http://localhost:3001/api/blogs/623dc1424a6e0319ffa8556d
+DELETE http://localhost:3001/api/blogs/624f18b85dbce24b2f8638ad
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxhbmRvIiwiaWQiOiI2MjNkOTYzMGQ3ODNiZmQ4MGE3NGQxMTciLCJpYXQiOjE2NDgyMDM1OTd9.FDoCg2vm9UXYd0B1_Cv31dPxP0MVMX8XJT981T8vaNg
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtpbWkiLCJpZCI6IjYyNDU3M2ZjZDE4NGQyOGFkNGRkM2IxZiIsImlhdCI6MTY0OTM1MDg3MX0.sbFKnlil_JWMsuIu9jLBJ2OsFLlrGXdYCp_BknCQCh0
